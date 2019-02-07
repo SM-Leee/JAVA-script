@@ -47,6 +47,41 @@ f();
 console.log(i);
 // 결론은 무조건 var를 사용해서 변수를 정의한다.
 
+
+//statement 구분
+// statement : JS Engine이 읽어서 실행하는 단위
+// \n or ;
+var str = "hello world";
+console.log(str);
+
+// 동적 타이핑(Dynamical Typing)
+// 실행중에 변수의 타입을 결정한다.
+
+var a = 10;
+console.log(a+":"+typeof a);
+
+a = "hello world"
+console.log(a+":"+typeof a);
+
+//추천 : 엄격하게 하나의 변수 타입은 변경하지 않도록 코딩하는 좋다
+
+//전역(Global) 객체 window
+console.log(window.a);
+
+var o = {};
+o.name = "둘리";
+o.age = new Number(20);
+o.age.man = 19;
+
+console.log(window.o);
+console.log(window.o.name);
+console.log(window.o.age);
+console.log(window.o.age.man);
+
+console.log(o);
+console.log(o.name);
+console.log(o.age);
+console.log(o.age.man);
 </script>
 </head>
 <body>
