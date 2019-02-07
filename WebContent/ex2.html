@@ -5,12 +5,48 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 <script>
-function h(){
-	var v = "...";
+// null vs undefined
+var myVar;
+var myVar2 = null;
+
+console.log(myVar+":"+myVar2);
+console.log(myVar == myVar2);
+
+//=== type까지 비교하여준다.
+console.log(myVar === myVar2);
+
+// ==(equality, 값의 등치성, 형변환 O)
+console.log("2"==2);
+console.log(parseInt("2")==2);
+console.log("2"===2);
+console.log(parseInt("2")===2);
+
+console.log(true==1);
+console.log('abc'==new String('abc'));
+console.log('false' == false);
+
+// ===(identity, 객체의 동일성, 형변환 X)
+console.log(true === 1);
+console.log('abc' === new String('abc'));
+
+//추천 : == 연산자를 사용할 때는 엄격하게 형변환을 해서 두피연산자의 타입을 맞춘다.
+console.log(parseInt('5')==5);
+
+// 변수 범위
+//1. var 사용 유무
+//2. var를 사용했을때 ,변수의 범위는 함수안
+i = 5;
+f = function(){
+	// 함수 안에서 var를 사용해서 변수를 정의하면 지역변수가 된다.
+	var i = 20;
+	console.log(i);
+	i = i -10;
 }
 
-h();
-v();
+f();
+console.log(i);
+// 결론은 무조건 var를 사용해서 변수를 정의한다.
+
 </script>
 </head>
 <body>
