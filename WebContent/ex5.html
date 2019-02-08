@@ -26,10 +26,29 @@ var o3 = {
 };
 console.log(o3);
 
-//3. 객체(object type) 생성하는 방법
+//4. 객체(object type) 생성하는 방법
 //	(커스텀)생성함수를 사용하는 방법
+var MyObject = function(name, age){
+	this.name = name;
+	this.age = age;
+}
+
+MyObject.prototype.school = "bit academy";
+MyObject.prototype.course = "Java Full Stack";
+MyObject.prototype.showInfo = function(){
+	console.log(this.name +":"+this.age+":"+this.school+":"+this.course)
+};
+//만약에 o4안에 없는 객체는 prototype으로 가서 찾아서 쓰게된다. 먄엑에 o4안에 있으면 o4를 사용한다.(프로토타입의 객체를 공유한다.)
 var o4 = new MyObject("도우넛", 13);
 console.log(o4);
+o4.showInfo();
+
+o4.school = "douzone academy";
+o4.showInfo();
+
+var o5 = new MyObject("희동이", 12);
+o5.showInfo();
+
 
 </script>
 </head>

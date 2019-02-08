@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var employee = {
+		name : "홍길동",
+		title : "과장"
+}
+
+// String일 경우에만 배열처럼 접근할수 있다 이것을 연관 배열이라고 한다.
+console.log(employee);
+console.log(employee.name+":"+employee.title);
+console.log(employee["name"]+":"+employee["title"]);
+
+// map
+
+var map = {};
+map["one"] = 1;
+map["two"] = 2;
+map["three"] = 3;
+
+console.log(map["three"]);
+console.log(map);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
